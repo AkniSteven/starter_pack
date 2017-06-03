@@ -13,9 +13,9 @@
 
 
 
-Route::get('/', function () {
+Route::get('/', ['as'=>'home',function () {
     return view('welcome');
-});
+}]);
 
 Route::group(['prefix'=>'admin'], function() {
 
@@ -28,5 +28,5 @@ Route::group(['prefix'=>'admin'], function() {
 
 Route::get('/{vue?}', function () {
     return view('welcome');
-})->where('vue', '[\/\w\.-]*');
+});
 
