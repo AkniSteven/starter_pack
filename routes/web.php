@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route::get('/admin', function() {
+//    return 'Test';
+//});
 
 Route::get('/{vue?}', function () {
     return view('welcome');
 })->where('vue', '[\/\w\.-]*');
+

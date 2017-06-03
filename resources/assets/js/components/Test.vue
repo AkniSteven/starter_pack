@@ -18,6 +18,7 @@
                     </tbody>
                 </table>
             </div>
+            {{message}}
         </div>
         <div id="app-6">
             <input v-model="message">
