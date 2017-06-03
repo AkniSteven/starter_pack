@@ -17,9 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/admin', function() {
-//    return 'Test';
-//});
+Route::group(['prefix'=>'admin'], function() {
+
+   Route::get('page/create', function() {
+       echo 'create';
+   });
+
+});
+
 
 Route::get('/{vue?}', function () {
     return view('welcome');
